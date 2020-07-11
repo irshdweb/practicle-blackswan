@@ -1,0 +1,34 @@
+<div class="full-content d-flex align-items-center justify-content-center">
+    <div class="log-pan d-flex justify-content-center flex-column">
+        <img src="../../assets/logo.png" alt="Logo" />
+        <div class="clearfix"></div>
+
+        <form class="d-flex flex-column w-100" #noteForm="ngForm" (ngSubmit)="noteForm.form.valid && logForm(noteForm.value)">
+            <div class="input-group mb-3 mt-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"><span class="material-icons">person</span></span>
+                </div>
+                <input type="text" class="form-control" placeholder="Email" name="mail" #mail="ngModel" [(ngModel)]="emailtext" required>
+            </div>
+            <div *ngIf="noteForm.submitted && mail.invalid" class="mb-3 error">     
+                * Email Is Required           
+             </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"><span class="material-icons">lock</span></span>
+                </div>
+                <input type="password" class="form-control" placeholder="Password" name="password" #password="ngModel" [(ngModel)]="passtext" required>
+            </div>
+            <div *ngIf="noteForm.submitted && mail.invalid" class="mb-3 error">     
+                * Password Is Required           
+             </div>
+
+            <div class="input-group mb-3">
+                <input type="submit" value="Login" class="btn-submit"/>
+            </div>
+            <div class="w-100 mb-3 error-text p-2" *ngIf="errorMessage">
+                Username or password is incorrect
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,49 @@
+@import '../../scss/variables';
+@import '../../scss/mixin';
+section{
+    &.main-body{
+        margin-top:130px;
+        z-index:1;
+        .main-card{
+            @include card;
+
+            .image-con{
+                width:80px;
+                height:80px;
+                @include border-radius(100%);
+                background:$thumb_bg;
+                font-size:$thumb_font;
+                font-weight:bold;
+                color:$white_bg;
+                text-transform: capitalize;
+                .material-icons-outlined{
+                    font-size:$thumb_font;
+                }
+            }
+
+            .name{
+                font-size:$name_size;
+                font-weight:bold;
+            }
+
+            .address{
+                .map-ico{
+                    font-size:$map_icon;
+                    margin-right: 6px;
+                    float:left;
+                    margin-top:5px;
+                }
+            }
+
+            .btn{
+                &.btn-primary{
+                    margin-top:10px;
+                    float:right;
+                    font-size:$small_font;
+                    border:none !important;
+                    background:$btn_color;
+                }
+            }
+        }
+    }
+}

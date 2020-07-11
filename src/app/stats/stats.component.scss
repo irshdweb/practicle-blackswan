@@ -1,0 +1,25 @@
+@import '../../scss/variables';
+@import '../../scss/mixin';
+
+section{
+    &.main-body{
+        margin-top:230px;
+        z-index:1;
+        .main-card{
+            @include card;
+            h2{
+                font-size: $icon_size;
+                font-weight:norma;
+                margin-bottom:12px;
+            }
+        }
+        .back-button{
+            .btn{
+                &.btn-primary{
+                    background:none;
+                    border:1px solid $white_bg;
+                }
+            }
+        }
+    }
+}

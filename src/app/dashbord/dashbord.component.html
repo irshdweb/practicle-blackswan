@@ -1,0 +1,34 @@
+<app-toolbar></app-toolbar>
+
+<section class="main-body">
+    <div class="container">
+        <div class="row ml-0 mr-0 main-row">
+            <div class="col-lg-6 col-md-12 col-12" *ngFor="let user of users">
+                <div class="main-card">
+                    <div class="row ml-0 mr-0">
+                        <div class="col-lg-3 col-md-12 col-12 p-0">
+                            <div class="image-con d-flex align-items-center justify-content-center">
+                                <span class="material-icons-outlined">
+                                    account_circle
+                                    </span>
+                            </div>
+                        </div>
+                        <div class="col-lg-9 col-md-12 col-12 p-0">
+                            <span class="name">{{user.name}}</span><br/>
+                            <span class="address clearfix"><span class="material-icons-outlined map-ico">location_on</span>
+                                {{user.address.street}} {{user.address.suite}} {{user.address.city}} <br/>
+                                <strong>{{user.address.zipcode}}</strong>
+                            </span>
+                            <div class="divider"></div>
+                            <span class="address clearfix"><span class="material-icons-outlined map-ico">mail</span>{{user.email}}</span>
+                            <span class="address clearfix"><span class="material-icons-outlined map-ico">call</span>{{user.phone}}</span>
+                            <span class="address clearfix"><span class="material-icons-outlined map-ico">language</span>{{user.website}}</span>
+                            <div class="clearfix"></div>
+                            <div class="btn btn-primary" (click)="viewUser(user.id)">View Stats</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

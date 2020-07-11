@@ -1,0 +1,13 @@
+@import './scss/variables';
+@import './scss/mixin';
+body{
+    &.body-class{
+        background:$btn_color;
+    }
+
+    .container{
+        max-width:90% !important;
+        width:90% !important;
+    }
+
+}

@@ -1,0 +1,28 @@
+<app-toolbar></app-toolbar>
+
+<section class="main-body">
+    <div class="container">
+        <div class="row ml-0 mr-0 main-row">
+            <div class="col-lg-6 col-md-12 col-12">
+                <div class="main-card">
+                    <h2>Uncompleted Tasks</h2>
+                    <div *ngIf="chart">
+                        <canvas id="canvas">{{ chart }}</canvas>
+                      </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-md-12 col-12">
+                <div class="main-card">
+                    <h2>Completed Tasks</h2>
+                    <div *ngIf="piechart">
+                        <canvas id="canvaspie">{{ piechart }}</canvas>
+                      </div>
+                </div>
+            </div>
+        </div>
+        <div class="row d-flex justify-content-center mt-3 back-button">
+            <button class="btn btn-primary" (click)="backtoDashbord()">Back To Dashboard</button>
+        </div>
+    </div>
+</section>
